@@ -1,4 +1,4 @@
-import Payment from "../models/Payment";
+import Payment from "../models/Payement";
 
 const paymentService = {
   processPayment: async (data: any) => {
