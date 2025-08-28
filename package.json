@@ -19,7 +19,8 @@
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.11.5",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.37.7"
+    "sequelize": "^6.37.7",
+    "zod": "^4.1.4"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -41,7 +42,13 @@
     "type": "git",
     "url": "git+https://github.com/Princecodeur633/trade-store.git"
   },
-  "keywords": ["SaaS", "Billing", "Marketplace", "Node.js", "TypeScript"],
+  "keywords": [
+    "SaaS",
+    "Billing",
+    "Marketplace",
+    "Node.js",
+    "TypeScript"
+  ],
   "author": "Kassy,Flamme",
   "bugs": {
     "url": "https://github.com/Princecodeur633/trade-store/issues"
