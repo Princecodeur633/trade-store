@@ -6,6 +6,8 @@ import billBatchRoutes from "./routes/billBatchRoutes";
 import billRoutes from "./routes/billRoutes";
 import { errorHandler } from "./middlewares/errorHandler";
 import { connectDB, sequelize } from "./config/db";
+import paymentRoutes from "./routes/paymentRoutes";
+import notificationRoutes from "./routes/notificationRoutes";
 
 const app: Application = express();
 
@@ -33,3 +35,7 @@ sequelize.sync({ alter: true }).then(() => {
 });
 
 export default app;
+
+
+app.use("/api/payments", paymentRoutes);
+app.use("/api/notifications", notificationRoutes);
