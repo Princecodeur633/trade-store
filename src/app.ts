@@ -69,8 +69,8 @@ app.use('/api/bills', billRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
-// 404 handler (catch-all)
-app.all('*', (req: Request, res: Response) => {
+// 404 handler (catch-all middleware)
+app.use((req: Request, res: Response) => {
   res.status(404).json({
     error: 'Route not found',
     path: req.originalUrl
