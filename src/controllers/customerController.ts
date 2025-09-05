@@ -13,6 +13,7 @@ export const createCustomer = async (req: Request, res: Response, next: NextFunc
 export const getCustomers = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const customers = await Customer.findAll();
+    throw new Error("Test error handling");
     res.json({ success: true, data: customers });
   } catch (err) {
     next(err);

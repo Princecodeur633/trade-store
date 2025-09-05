@@ -18,6 +18,8 @@ app.use(express.json());
 app.use("/api/providers", providerRoutes);
 app.use("/api/customers", customerRoutes);
 app.use("/api/bill-batches", billBatchRoutes);
+app.use("/api/payments", paymentRoutes);
+app.use("/api/notifications", notificationRoutes);
 app.use("/api/bills", billRoutes);
 
 // Health check
@@ -37,5 +39,4 @@ sequelize.sync({ alter: true }).then(() => {
 export default app;
 
 
-app.use("/api/payments", paymentRoutes);
-app.use("/api/notifications", notificationRoutes);
+
